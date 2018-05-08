@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SalesVisitTest">
+  <test name="Client">
+    <classes>
+      <class name="com.srinqa.functionalTest.Login"/>
+      <class name="com.srinqa.functionalTest.StoreDetail"/>
+      <class name="com.srinqa.functionalTest.DrawerMenu"/>
+    </classes>
+  </test> <!-- Client -->
+</suite> <!-- SalesVisitTest -->

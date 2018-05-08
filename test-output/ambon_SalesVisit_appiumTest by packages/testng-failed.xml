@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ambon_SalesVisit_appiumTest by packages]">
+  <test name="com.srinqa.functionalTest(failed)">
+    <classes>
+      <class name="com.srinqa.functionalTest.SellOutAndStock">
+        <methods>
+          <include name="teardown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.srinqa.functionalTest.SellOutAndStock -->
+      <class name="com.srinqa.functionalTest.Login">
+        <methods>
+          <include name="Ambon05_FirstTimeLogin"/>
+          <include name="Ambon03A_TapEyeIcon"/>
+          <include name="Ambon02_ValidationPassword"/>
+          <include name="Ambon03B_ForgotPasswordUICheck"/>
+          <include name="Ambon04A_ForgotPasswordCancel"/>
+          <include name="teardown"/>
+          <include name="setUp"/>
+          <include name="Ambon04B_ForgotPasswordOK"/>
+        </methods>
+      </class> <!-- com.srinqa.functionalTest.Login -->
+    </classes>
+  </test> <!-- com.srinqa.functionalTest(failed) -->
+</suite> <!-- Failed suite [ambon_SalesVisit_appiumTest by packages] -->
