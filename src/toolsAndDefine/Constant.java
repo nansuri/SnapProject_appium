@@ -4,7 +4,7 @@ public class Constant {
 	
 	// Default Appium Configuration
 	public String PACKAGE = "com.snapcart.android";
-	public String PACKAGE_ACTIVITY = "com.snapcart.android.ui.login.LoginEmailActivity_";
+	public String PACKAGE_ACTIVITY = "com.snapcart.android.ui.initial.InitialActivity_";
 	public String DEVICE_NAME = "ANDROID";
 	
 	// Account

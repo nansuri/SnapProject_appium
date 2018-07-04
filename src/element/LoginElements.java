@@ -1,6 +1,6 @@
 package element;
 
-public class LoginElement {
+public class LoginElements {
 
 	// Login page
 	public String signInButton = "com.snapcart.android:id/button_login";

@@ -5,27 +5,29 @@ import java.net.URL;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import element.LoginElement;
+import element.LoginElements;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 import toolsAndDefine.Constant;
 
-public class LoginPage {
-	AndroidDriver<?> driver;
+public class Login {
+	static AndroidDriver<?> driver;
 	Constant constant = new Constant();
-	LoginElement elemen = new LoginElement(); 
+	LoginElements elemen = new LoginElements(); 
 	
-	@BeforeClass
+	@BeforeTest
 	public void setUp() throws MalformedURLException{
 		DesiredCapabilities caps = new DesiredCapabilities();
 	
 		caps = DesiredCapabilities.android();
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, constant.DEVICE_NAME);
 		caps.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
+		caps.setCapability(MobileCapabilityType.NO_RESET, true);
 		
 		// Define application
 		caps.setCapability("appPackage",constant.PACKAGE);
@@ -73,5 +75,10 @@ public class LoginPage {
 		driver.findElement(By.id(elemen.forgotPasswordButton)).click();
 		driver.findElement(By.id(elemen.forgotPasswordEmailField)).sendKeys(constant.EMAIL_VALID);
 		driver.findElement(By.id(elemen.buttonForgot)).click();
+	}
+	
+	@AfterTest
+	public static void setDown() {
+		driver.quit();
 	}
 }
