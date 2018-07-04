@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="functionalTest.LoginPage">
+      <class name="functionalTest.Login">
         <methods>
-          <include name="Snap01_ForgotPassRegistered"/>
-          <include name="Snap01_LoginValid"/>
           <include name="setUp"/>
-          <include name="Snap01_ForgotPassUnregistered"/>
+          <include name="setDown"/>
           <include name="Snap01_LoginInvalid"/>
+          <include name="Snap01_LoginValid"/>
         </methods>
-      </class> <!-- functionalTest.LoginPage -->
+      </class> <!-- functionalTest.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
